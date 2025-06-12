@@ -146,7 +146,6 @@ def compare_answers(request: CompareAnswersRequest):
         logger.info(f"Final Score: {final_score}/{request.total_marks}")
         return {
             "score": final_score,
-            "probabilities": probs,
             "entailment": probs["entailment"],
             "neutral": probs["neutral"],
             "contradiction": probs["contradiction"]
